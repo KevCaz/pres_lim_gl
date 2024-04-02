@@ -1,0 +1,161 @@
+---
+title: "Estimation of Food Webs Interactions with Linear Inverse Models"
+author: "Kevin Cazelles et al."
+date: "2024-04-24"
+output:
+  xaringan::moon_reader:
+    css: [default, rd.css, rd-font.css, "hygge"]
+    lib_dir: assets
+    seal: false
+    nature:
+      highlightStyle: dracula
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+---
+
+
+class: title-slide, middle
+
+
+# Estimation of Food Webs Interactions with Linear Inverse Models
+
+.instructors[
+  .font180[**Kevin Cazelles, Kevin McCann & Kayla Hale**]
+  <br><br>
+  .font120[2024-04-24]
+]
+
+
+<div class="logo">
+<img src="img/logo_cfem.png" height="100px"></img>
+<img src="img/logo_uog.jpg" height="120px"></img>
+</div>
+
+```{r setup, include = FALSE}
+library(iseWorkshops)
+```
+
+---
+
+class: clear, middle
+
+## Introduction 
+
+
+---
+# Linear Inverse Models
+
+$$\mathbf{E} \mathbf{x} = \mathbf{f}$$
+
+$$\mathbf{E} \mathbf{x}	\approx \mathbf{b}$$
+
+$$\mathbf{E} \mathbf{x} \geq \mathbf{g}$$
+
+</br>
+
+
+--
+
+$$2x = 12$$
+
+--
+
+$$2x + y > 12$$
+
+
+---
+# Linear Inverse Models in Food Webs
+
+
+![:scalec 60%](img/biomass_balance.png)
+
+- `r bk()` Soetaert & Van Oevelen (2009), **Oceanography**. 
+
+
+
+---
+# Linear Inverse Models in Food Webs
+
+
+![:scalec 55%](img/simplified_fw.png)
+
+
+- Biomasses known
+- Linear relationships among flux
+- `r bk()` Soetaert & Van Oevelen (2009), **Oceanography**. 
+
+
+---
+# Linear Inverse Models in Food Webs
+
+
+- **Ecopath**: mass balance modeling
+- 2 master equations 
+
+```
+Production = catch + predation + net migration + 
+  biomass accumulation + other mortality
+
+Consumption = production + respiration + unassimilated food
+```
+
+- `r lk()` https://ecopath.org/about/#toggle-id-1
+
+
+
+---
+
+class: inverse, center, middle
+
+# Application to classic Lotka-Voltera
+
+![:custom_hr]()
+
+
+---
+# Basic explanation (use pkg) 
+
+
+
+---
+# Using more contraints
+
+![:scalec 55%](img/gellner.png)
+
+
+- `r bk()` Gellner, McCann & Hasting (2023), **PNAS**. 
+
+
+---
+# Using more contraints
+
+![:scalec 55%](img/gellner2.png)
+
+
+- `r bk()` Gellner, McCann & Hasting (2023), **PNAS**. 
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# Solving management challenges with LIM 
+
+![:custom_hr]()
+
+
+<!-- more examples from the package -->
+
+
+
+---
+class: inverse, center, middle
+
+# Interactive tool (Shiny App)
+
+![:custom_hr]()
+
+
+<!-- demo here 10 min -->
