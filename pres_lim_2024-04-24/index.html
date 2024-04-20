@@ -46,9 +46,8 @@ class: inverse, center, middle
 ---
 # Linear Inverse Models
 
-### Solve a system with a set of equalities and inequalities
+### Solve systems of equalities, inequalities and approximations
 
-&lt;/br&gt;
 
 .pull-left[
 
@@ -60,71 +59,116 @@ class: inverse, center, middle
 
 ]
 
-
 ---
 # Linear Inverse Models
 
 
-### Solve a system with a set of equalities and inequalities
-
-&lt;/br&gt;
+### Solve systems of equalities, inequalities and approximations
 
 
 .pull-left[
 
-`$$\mathbf{E} \color{black}{\mathbf{x}} = \mathbf{f}$$`
+`$$\mathbf{E} \color{red}{\mathbf{x}} = \mathbf{f}$$`
 
-`$$\mathbf{E} \color{black}{\mathbf{x}} \approx \mathbf{b}$$`
+`$$\mathbf{E} \color{red}{\mathbf{x}} \approx \mathbf{b}$$`
 
-`$$\mathbf{E} \color{black}{\mathbf{x}} \geq \mathbf{g}$$`
-
-]
-
-
-.pull-right[
-
-`$$2\color{black}{x} = 12$$`
-
-&lt;/br&gt;
-
-`$$2\color{black}{x} + \color{black}{y} &gt; 12$$`
-
+`$$\mathbf{E} \color{red}{\mathbf{x}} \geq \mathbf{g}$$`
 
 ]
-
 
 
 ---
 # Linear Inverse Models
 
 
-### Solve a system with a set of equalities and inequalities
+### Solve systems of equalities, inequalities and approximations
 
-&lt;/br&gt;
 
 .pull-left[
 
-`$$\mathbf{E} \color{black}{\mathbf{x}} = \mathbf{f}$$`
+`$$\mathbf{E} \color{red}{\mathbf{x}} = \mathbf{f}$$`
 
-`$$\mathbf{E} \color{black}{\mathbf{x}} \approx \mathbf{b}$$`
+`$$\mathbf{E} \color{red}{\mathbf{x}} \approx \mathbf{b}$$`
 
-`$$\mathbf{E} \color{black}{\mathbf{x}} \geq \mathbf{g}$$`
+`$$\mathbf{E} \color{red}{\mathbf{x}} \geq \mathbf{g}$$`
 
 ]
 
 
 .pull-right[
 
-`$$2\color{black}{x} = 12$$`
+`$$2\color{red}{x} = 12$$`
 
 &lt;/br&gt;
 
-`$$2\color{black}{x} + \color{black}{y} &gt; 12$$`
+`$$2\color{red}{x} + \color{red}{y} = 12$$`
 
-`$$\color{black}{x} &gt; 0;  \color{black}{y} &gt; 0$$`
-$$\color{black}{y} &lt; 4 $$
+2 unknown variables, 1 equality
+
 ]
 
+
+---
+# Linear Inverse Models
+
+
+### Solve systems of equalities, inequalities and approximations
+
+
+
+.pull-left[
+
+`$$\mathbf{E} \color{red}{\mathbf{x}} = \mathbf{f}$$`
+
+`$$\mathbf{E} \color{red}{\mathbf{x}} \approx \mathbf{b}$$`
+
+`$$\mathbf{E} \color{red}{\mathbf{x}} \geq \mathbf{g}$$`
+
+]
+
+
+.pull-right[
+
+`$$2\color{red}{x} = 12$$`
+
+&lt;/br&gt;
+
+`$$\color{red}{y} = 12 - 2\color{red}{x}$$`
+
+in other words, a **line** 
+
+]
+
+
+---
+# Linear Inverse Models
+
+### Solve systems of equalities, inequalities and approximations
+
+.pull-left[
+
+`$$\mathbf{E} \color{red}{\mathbf{x}} = \mathbf{f}$$`
+
+`$$\mathbf{E} \color{red}{\mathbf{x}} \approx \mathbf{b}$$`
+
+`$$\mathbf{E} \color{red}{\mathbf{x}} \geq \mathbf{g}$$`
+
+]
+
+
+.pull-right[
+
+`$$2\color{red}{x} = 12$$`
+
+&lt;/br&gt;
+
+`$$2\color{red}{x} + \color{red}{y} = 12$$`
+
+`$$\color{red}{x} &gt; 0;  \color{red}{y} &gt; 0$$`
+$$\color{red}{y} &lt; 4 $$
+]
+
+all `\((\color{red}{x}, \color{red}{y})\)` such as `\(\color{red}{y} = 12 - 2\color{red}{x}\)` and `\(x \in ]4, 6[\)` : a **segment**
 
 --
 ### Large array of problems 
@@ -196,7 +240,7 @@ Consumption = production + respiration + unassimilated food
 
 ## Let's keep in mind 
 
-1. LIM approach can be used to combine a set of constraints on a mass balance model to estimate the masse/energy flows;
+1. LIM approach can be used to combine a set of constraints on a mass balance model to estimate the mase/energy flows;
 
 2. the more the constraints, the smaller the solution space.
 
@@ -206,7 +250,7 @@ Consumption = production + respiration + unassimilated food
 
 class: inverse, center, middle
 
-# LIM and food web stability
+# LIM for food web resilience
 
 ![:custom_hr]()
 
@@ -229,8 +273,8 @@ class: inverse, center, middle
 &lt;/br&gt;
 
 `$$\begin{equation}\begin{aligned}
-\frac{d\color{black}{Prey}}{dt}      &amp;= \color{black}{Prey} \left( r_{Prey} + a_{1, 1} \color{black}{Prey} - a_{1, 2} \color{black}{Predator} \right) \\
-\frac{d\color{black}{Predator}}{dt}  &amp;= \color{black}{Predator} \left( r_{Predator} + a_{2, 1} \color{black}{Prey} \right)
+\frac{d\color{red}{Prey}}{dt}      &amp;= \color{red}{Prey} \left( r_{Prey} + a_{1, 1} \color{red}{Prey} - a_{1, 2} \color{red}{Predator} \right) \\
+\frac{d\color{red}{Predator}}{dt}  &amp;= \color{red}{Predator} \left( r_{Predator} + a_{2, 1} \color{red}{Prey} \right)
 \end{aligned}\end{equation}$$`
 
 Classically: 
@@ -248,8 +292,8 @@ Classically:
 - biomass known
 
 `$$\begin{equation}\begin{aligned}
-\left( r_{Prey} + a_{1, 1} Prey - a_{1, 2} Predator \right) &amp;= 0\\
-\left( r_{Predator} + a_{2, 1} Prey \right) &amp;= 0
+\left( r_{Prey} + a_{1, 1} \color{red}{Prey} - a_{1, 2} \color{red}{Predator} \right) &amp;= 0\\
+\left( r_{Predator} + a_{2, 1} \color{red}{Prey} \right) &amp;= 0
 \end{aligned}\end{equation}$$`
 
 
@@ -262,9 +306,12 @@ Classically:
 - biomass known
 
 `$$\begin{equation}\begin{aligned}
-0 &amp;= \left( r_{Prey} + \color{black}{a_{1, 1}} Prey - \color{black}{a_{1, 2}} Predator \right) \\
-0 &amp;= \left( r_{Predator} + \color{black}{a_{2, 1}} Prey \right)
+\left( r_{Prey} + \color{red}{a_{1, 1}} Prey - \color{red}{a_{1, 2}} Predator \right) &amp;= 0\\ 
+\left( r_{Predator} + \color{red}{a_{2, 1}} Prey \right) &amp;= 0
 \end{aligned}\end{equation}$$`
+
+- 2 equalities 
+- 3 unknown variables
 
 
 ---
@@ -272,8 +319,8 @@ Classically:
 
 ### Example 
 
-1. Prey and Predator biomass known 
-2. Interaction are positive + Prey <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> Predator **&lt;** Prey <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> Predator
+1. Prey and Predator **biomass known**
+2. **Interactions are positive** + Prey <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> Predator **&lt;** Prey <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> Predator
 
 ![:scalec 67%](img/res-1.png)
 
@@ -291,16 +338,7 @@ if stability taken as resilience so..
 ---
 # Using more constraints
 
-![:scalec 56%](img/gellner.png)
-
-
-- <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Gellner, McCann &amp; Hasting (2023), **PNAS**. 
-
-
----
-# Using more constraints
-
-![:scalec 68%](img/gellner2.png)
+![:scalec 70%](img/gellner3.png)
 
 
 - <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Gellner, McCann &amp; Hasting (2023), **PNAS**. 
