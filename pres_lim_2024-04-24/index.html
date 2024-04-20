@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="Kevin Cazelles et al." />
     <meta name="date" content="2024-04-24" />
-    <script src="assets/header-attrs-2.25/header-attrs.js"></script>
+    <script src="assets/header-attrs-2.26/header-attrs.js"></script>
     <link href="assets/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="assets/remark-css-0.0.1/hygge.css" rel="stylesheet" />
     <link rel="stylesheet" href="rd.css" type="text/css" />
@@ -36,49 +36,120 @@ class: title-slide, middle
 
 
 ---
+class: inverse, center, middle
 
-class: clear, middle
+# Introduction
 
-## Introduction 
+![:custom_hr]()
 
 
 ---
 # Linear Inverse Models
 
+### Solve a system with a set of equalities and inequalities
+
+&lt;/br&gt;
+
+.pull-left[
+
 `$$\mathbf{E} \mathbf{x} = \mathbf{f}$$`
 
-`$$\mathbf{E} \mathbf{x}	\approx \mathbf{b}$$`
+`$$\mathbf{E} \mathbf{x} \approx \mathbf{b}$$`
 
 `$$\mathbf{E} \mathbf{x} \geq \mathbf{g}$$`
+
+]
+
+
+---
+# Linear Inverse Models
+
+
+### Solve a system with a set of equalities and inequalities
 
 &lt;/br&gt;
 
 
+.pull-left[
+
+`$$\mathbf{E} \color{black}{\mathbf{x}} = \mathbf{f}$$`
+
+`$$\mathbf{E} \color{black}{\mathbf{x}} \approx \mathbf{b}$$`
+
+`$$\mathbf{E} \color{black}{\mathbf{x}} \geq \mathbf{g}$$`
+
+]
+
+
+.pull-right[
+
+`$$2\color{black}{x} = 12$$`
+
+&lt;/br&gt;
+
+`$$2\color{black}{x} + \color{black}{y} &gt; 12$$`
+
+
+]
+
+
+
+---
+# Linear Inverse Models
+
+
+### Solve a system with a set of equalities and inequalities
+
+&lt;/br&gt;
+
+.pull-left[
+
+`$$\mathbf{E} \color{black}{\mathbf{x}} = \mathbf{f}$$`
+
+`$$\mathbf{E} \color{black}{\mathbf{x}} \approx \mathbf{b}$$`
+
+`$$\mathbf{E} \color{black}{\mathbf{x}} \geq \mathbf{g}$$`
+
+]
+
+
+.pull-right[
+
+`$$2\color{black}{x} = 12$$`
+
+&lt;/br&gt;
+
+`$$2\color{black}{x} + \color{black}{y} &gt; 12$$`
+
+`$$\color{black}{x} &gt; 0;  \color{black}{y} &gt; 0$$`
+$$\color{black}{y} &lt; 4 $$
+]
+
+
 --
+### Large array of problems 
 
-`$$2x = 12$$`
-
---
-
-`$$2x + y &gt; 12$$`
+- Optimal transportation, clustering, solving Sudoku, etc.
+- <svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg> https://jump.dev/JuMP.jl/stable/tutorials/linear/diet/
 
 
 ---
 # Linear Inverse Models in Food Webs
 
 
-![:scalec 60%](img/biomass_balance.png)
+![:scalec 70%](img/biomass_balance.png)
 
 - <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Soetaert &amp; Van Oevelen (2009), **Oceanography**. 
 
 
+???
+You may know some flows
+
 
 ---
 # Linear Inverse Models in Food Webs
 
-
-![:scalec 55%](img/simplified_fw.png)
-
+![:scalec 60%](img/simplified_fw.png)
 
 - Biomasses known
 - Linear relationships among flux
@@ -88,6 +159,23 @@ class: clear, middle
 ---
 # Linear Inverse Models in Food Webs
 
+![:scalec 65%](img/constraints.png)
+
+- <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Soetaert &amp; Van Oevelen (2009), **Oceanography**. 
+
+
+---
+# Linear Inverse Models in Food Webs
+
+![:scalec 75%](img/results.png)
+
+- <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Soetaert &amp; Van Oevelen (2009), **Oceanography**. 
+
+
+---
+# Linear Inverse Models in Food Webs
+
+## A note about Ecopath
 
 - **Ecopath**: mass balance modeling
 - 2 master equations 
@@ -104,23 +192,106 @@ Consumption = production + respiration + unassimilated food
 
 
 ---
+# Linear Inverse Models in Food Webs
+
+## Let's keep in mind 
+
+1. LIM approach can be used to combine a set of constriants on a mass balance model to estimate the masse/energy flows;
+
+2. the more the constraints, the smaller the solution space.
+
+
+
+---
 
 class: inverse, center, middle
 
-# Application to classic Lotka-Voltera
+# LIM and food web stability
 
 ![:custom_hr]()
 
 
----
-# Basic explanation (use pkg) 
 
+---
+# LIM in classical Lotka-Volterra
+
+&lt;/br&gt;
+
+`$$\begin{equation}\begin{aligned}
+\frac{dPrey}{dt}      &amp;= Prey \left( r_{Prey} + \alpha_{1, 1} Prey - \alpha_{1, 2} Predator \right) \\
+\frac{dPredator}{dt}  &amp;= Predator \left( r_{Predator} + \alpha_{2, 1} Prey \right)
+\end{aligned}\end{equation}$$`
+
+
+---
+# LIM in classical Lotka-Volterra
+
+&lt;/br&gt;
+
+`$$\begin{equation}\begin{aligned}
+\frac{d\color{black}{Prey}}{dt}      &amp;= \color{black}{Prey} \left( r_{Prey} + \alpha_{1, 1} \color{black}{Prey} - \alpha_{1, 2} \color{black}{Predator} \right) \\
+\frac{d\color{black}{Predator}}{dt}  &amp;= \color{black}{Predator} \left( r_{Predator} + \alpha_{2, 1} \color{black}{Prey} \right)
+\end{aligned}\end{equation}$$`
+
+Classicaly: 
+
+1. variation of `\(Predator\)` and `\(Prey\)` population (individuals, biomass)
+2. study of the stability of the system 
+
+
+---
+# LIM in classical Lotka-Volterra
+
+### Assumptions 
+
+- near equilibrium 
+- biomass known
+
+`$$\begin{equation}\begin{aligned}
+\left( r_{Prey} + \alpha_{1, 1} Prey - \alpha_{1, 2} Predator \right) &amp;= 0\\
+\left( r_{Predator} + \alpha_{2, 1} Prey \right) &amp;= 0
+\end{aligned}\end{equation}$$`
+
+
+---
+# LIM in classical Lotka-Volterra
+
+### Assumptions 
+
+- near equilibrium 
+- biomass known
+
+`$$\begin{equation}\begin{aligned}
+0 &amp;= \left( r_{Prey} + \color{black}{\alpha_{1, 1}} Prey - \color{black}{\alpha_{1, 2}} Predator \right) \\
+0 &amp;= \left( r_{Predator} + \color{black}{\alpha_{2, 1}} Prey \right)
+\end{aligned}\end{equation}$$`
+
+
+---
+# LIM in classical Lotka-Volterra
+
+### Example 
+
+1. Prey and Predator biomass known 
+2. Interaction are positive + Prey <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> Predator **&lt;** Prey <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> Predator
+
+![:scalec 67%](img/res-1.png)
+
+
+
+---
+# LIM in classical Lotka-Volterra
+
+![:scalec 45%](img/compare1-1.png)
+
+???
+if stability taken as resilience so..
 
 
 ---
 # Using more contraints
 
-![:scalec 55%](img/gellner.png)
+![:scalec 56%](img/gellner.png)
 
 
 - <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Gellner, McCann &amp; Hasting (2023), **PNAS**. 
@@ -129,7 +300,7 @@ class: inverse, center, middle
 ---
 # Using more contraints
 
-![:scalec 55%](img/gellner2.png)
+![:scalec 68%](img/gellner2.png)
 
 
 - <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Gellner, McCann &amp; Hasting (2023), **PNAS**. 
