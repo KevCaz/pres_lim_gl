@@ -39,13 +39,13 @@ a:active {
 }
 
 .logo img {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 img {
   margin: 1rem;
   border-style: solid;
-  border-width: 4px;
+  border-width: 3px;
   border-color: #10516f;
 }
 

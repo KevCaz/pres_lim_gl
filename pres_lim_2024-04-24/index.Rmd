@@ -377,7 +377,7 @@ go over various potential avenues where we can use lim
 |Symbol        | Name                        |
 |:------------ |:--------------------------- |
 |$$a_{1, 1}$$   | intraspecific competition  |
-|$$a_{1, 3}$$  | prey -> predator           |
+|$$a_{1, 3}$$   | prey -> predator           |
 |$$a_{2, 2}$$   | intraspecific competition  |
 |$$a_{2, 4}$$   | prey -> predator           |
 |$$a_{3, 1}$$   | predator <- prey           |
@@ -393,31 +393,57 @@ go over various potential avenues where we can use lim
 ---
 # A five species example - resilience 
 
-
-![:scalec 80%](img/boxplot-1.png)
+![:scalec 85%](img/boxplot-1.png)
 
 
 ---
 # A five species example - resilience 
 
+![:scalec 60%](img/dynamic_5.png)
 
-![:scalec 80%](img/boxplot2-1.png)
-
-- 25% most stable (resilient)
 
 ---
 # Setting a<sub>5,3</sub> to a constant
 
-.pull-left[
-![:scalec 95%](img/boxplot-1.png)
-]
 
-.pull-right[
-![:scalec 95%](img/boxplot_v3.png)
-]
+![:scalec 80%](img/boxplot_one_less.png)
+
 
 ???
 decreasing unknown 
+
+---
+# Setting a<sub>5,3</sub> to a constant
+
+
+![:scalec 50%](img/boxplot_one_less_stab.png)
+
+
+
+---
+# Refining energy constraints
+
+![:scalec 78%](img/change_energy_constraints.png)
+
+
+---
+# Refining energy constraints
+
+![:scalec 50%](img/change_energy_constraints_stab.png)
+
+
+
+---
+# Most stable vs. least stable 
+
+![:scalec 80%](img/most_25.png)
+
+
+---
+# Most stable vs. least stable
+
+![:scalec 80%](img/most_10.png)
+
 
 ---
 # Increasing a<sub>3,1</sub>
@@ -430,16 +456,22 @@ decreasing unknown
 ![:scalec 45%](img/increase_a_3_1_full.png)
 
 
----
-# Adding more constraints
-
 
 ---
 # Increasing top predator biomass
 
+![:scalec 85%](img/increase_tp_biomass.png)
+
 
 ???
 we get the full portray
+till here we had the biomass fix
+
+---
+# Increasing top predator biomass
+
+![:scalec 50%](img/increase_tp_biomass_stab.png)
+
 
 
 ---
