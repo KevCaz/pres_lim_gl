@@ -279,8 +279,9 @@ class: inverse, center, middle
 
 Classically: 
 
-1. variation of `\(Predator\)` and `\(Prey\)` population (individuals, biomass)
-2. study of the stability of the system 
+1. interactions are known 
+2. variation of `\(Predator\)` and `\(Prey\)` population (individuals, biomass)
+3. study of the stability of the system 
 
 
 ---
@@ -365,11 +366,14 @@ go over various potential avenues where we can use lim
 # A five species example
 
 .pull-left[
-![:scalec 95%](img/netw_5.png)&lt;/br&gt;
+![:scalec 50%](img/net5.png)
 
-- 5 species 
-- 10 interactions
-- **constraints**: interactions are positive and asymmetrical
+- 5 species, 10 interactions
+- **assumptions**:
+  - Lotka-Volterra
+  - biomass/population known 
+- **constraints**: 
+  - interactions are positive and asymmetrical
 ]
 
 .pull-right[
@@ -477,6 +481,29 @@ till here we had the biomass fix
 ---
 # Analyzing temporal variation 
 
+![:scalec 95%](img/ts_3phases.png)
+
+
+---
+# Analyzing temporal variation 
+
+![:scalec 85%](img/drawing_ts.png)
+
+
+---
+# Analyzing temporal variation 
+
+![:scalec 90%](img/3phases_all.png)
+
+
+
+---
+# Analyzing temporal variation 
+
+![:scalec 60%](img/3phases_all_stab.png)
+
+
+
 
 
 ---
@@ -486,8 +513,8 @@ till here we had the biomass fix
 ## A flexible tools to add constraints 
 
 - allometric constraints (previous presentation)
-
 - constraints based on time series (variation of biomass)
+- working on a R package
 
 --
 
