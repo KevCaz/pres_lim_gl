@@ -1,0 +1,81 @@
+---
+# A five species example - resilience 
+
+![:scalec 60%](img/dynamic_5.png)
+
+
+---
+# Setting a<sub>5,3</sub> to a constant
+
+
+![:scalec 80%](img/boxplot_one_less.png)
+
+
+???
+decreasing unknown 
+
+---
+# Setting a<sub>5,3</sub> to a constant
+
+
+![:scalec 50%](img/boxplot_one_less_stab.png)
+
+
+
+---
+# Refining energy constraints
+
+![:scalec 78%](img/change_energy_constraints.png)
+
+
+---
+# Refining energy constraints
+
+![:scalec 50%](img/change_energy_constraints_stab.png)
+
+
+
+---
+# Increasing a<sub>3,1</sub>
+
+![:scalec 80%](img/increase_a_3_1.png)
+
+---
+# Increasing a<sub>3,1</sub>
+
+![:scalec 45%](img/increase_a_3_1_full.png)
+
+
+
+
+
+
+
+---
+# Management Challenges With LIM
+
+### Adding constraints will reduce the interaction strength space 
+
+### Refining know
+
+- Refining 
+  - refined constraints on trophic efficiency
+  - evaluating biomass variability
+
+
+
+---
+# Increasing top predator biomass
+
+![:scalec 85%](img/increase_tp_biomass.png)
+
+
+???
+we get the full portray
+till here we had the biomass fix
+
+
+---
+# Increasing top predator biomass
+
+![:scalec 50%](img/increase_tp_biomass_stab.png)

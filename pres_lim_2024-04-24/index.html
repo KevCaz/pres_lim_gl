@@ -181,7 +181,7 @@ all `\((\color{red}{x}, \color{red}{y})\)` such as `\(\color{red}{y} = 12 - 2\co
 # Linear Inverse Models in Food Webs
 
 
-![:scalec 70%](img/biomass_balance.png)
+![:scalec 75%](img/biomass_balance.png)
 
 - <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Soetaert &amp; Van Oevelen (2009), **Oceanography**. 
 
@@ -193,19 +193,48 @@ You may know some flows
 ---
 # Linear Inverse Models in Food Webs
 
-![:scalec 60%](img/simplified_fw.png)
 
-- Biomasses known
-- Linear relationships among flux
-- <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Soetaert &amp; Van Oevelen (2009), **Oceanography**. 
+.pull-left[
+  &lt;/br&gt;
+  $$\frac{dB_i}{dt} = f_1 + f_2 + f_3 + ... $$
+
+]
+
+.pull-right[
+  ![:scalec 85%](img/whole_web.png)
+  
+]
+
+--
+
+- Mass balance 
+
+--
+
+- A set of equalities 
+
+--
+
+- Some knowledge about flows:
+  - known parameters: `\(f_1 = 2.5\)`
+  - inequalities: `\(f_1 &gt; f_2\)`
+  - approximations: `\(f_1 \approx 2.5\)`
+
+--
 
 
 ---
 # Linear Inverse Models in Food Webs
 
-![:scalec 65%](img/constraints.png)
+$$\frac{dB_i}{dt} = f_1 + f_2 + f_3 + ... $$
 
-- <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Soetaert &amp; Van Oevelen (2009), **Oceanography**. 
+- Using LIM, we obtained a **space**, sets of working flows `\((f_1, f_2, ...)\)`
+
+
+![:scalec 45%](img/space.png)
+
+
+
 
 
 ---
@@ -236,17 +265,6 @@ Consumption = production + respiration + unassimilated food
 
 
 ---
-# Linear Inverse Models in Food Webs
-
-## Let's keep in mind 
-
-1. LIM approach can be used to combine a set of constraints on a mass balance model to estimate the mase/energy flows;
-
-2. the more the constraints, the smaller the solution space.
-
-
-
----
 
 class: inverse, center, middle
 
@@ -266,6 +284,8 @@ class: inverse, center, middle
 \frac{dPredator}{dt}  &amp;= Predator \left( r_{Predator} + a_{2, 1} Prey \right)
 \end{aligned}\end{equation}$$`
 
+- Functional response type I
+
 
 ---
 # LIM in classical Lotka-Volterra
@@ -280,7 +300,7 @@ class: inverse, center, middle
 Classically: 
 
 1. interactions are known 
-2. variation of `\(Predator\)` and `\(Prey\)` population (individuals, biomass)
+2. we look variations of `\(Predator\)` and `\(Prey\)` population (individuals, biomass)
 3. study of the stability of the system 
 
 
@@ -289,8 +309,9 @@ Classically:
 
 ### Assumptions 
 
-- near equilibrium 
 - biomass known
+- near equilibrium we have:
+
 
 `$$\begin{equation}\begin{aligned}
 \left( r_{Prey} + a_{1, 1} \color{red}{Prey} - a_{1, 2} \color{red}{Predator} \right) &amp;= 0\\
@@ -303,46 +324,138 @@ Classically:
 
 ### Assumptions 
 
-- near equilibrium 
 - biomass known
+- near equilibrium we have:
 
 `$$\begin{equation}\begin{aligned}
 \left( r_{Prey} + \color{red}{a_{1, 1}} Prey - \color{red}{a_{1, 2}} Predator \right) &amp;= 0\\ 
 \left( r_{Predator} + \color{red}{a_{2, 1}} Prey \right) &amp;= 0
 \end{aligned}\end{equation}$$`
 
+--
+
+### Let's use LIM
+
 - 2 equalities 
-- 3 unknown variables
+- 3 unknown variables: **interaction strengths** that are hard to measure
+-  `\(Prey\)` and `\(Predator\)` are known: **biomass/population known**
+- **Interactions are positive**
+- **Interactions are asymmetrical**:
+  - conversion efficiency: `\(a_{1, 2} &gt; a_{2,1}\)`
 
 
 ---
-# LIM in classical Lotka-Volterra
+# Sets of interactions strengths
 
-### Example 
+Sets of interactions strengths that lead to the observed biomass
 
-1. Prey and Predator **biomass known**
-2. **Interactions are positive** + Prey <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> Predator **&lt;** Prey <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> Predator
+|  `\(a_{1,1}\)`| `\(a_{2,1}\)` | `\(a_{1,2}\)` |
+|---------:|-----:|--------:|
+| 0.1326175|     1| 1.867382|
+| 0.2158816|     1| 1.784118|
+| 0.0697550|     1| 1.930245|
+| 0.3031896|     1| 1.696810|
+| 0.0743744|     1| 1.925626|
+| 0.2347560|     1| 1.765244|
+| 0.4509523|     1| 1.549048|
+| 0.3427189|     1| 1.657281|
+| 0.3577168|     1| 1.642283|
 
-![:scalec 67%](img/res-1.png)
+
+---
+# Distribution of interactions strengths
+
+![:scalec 75%](img/distrib_2sp.png)
 
 
 
 ---
-# LIM in classical Lotka-Volterra
+# Resilience metric
 
-![:scalec 45%](img/compare1-1.png)
+`$$\begin{equation}\begin{aligned}
+\frac{dPrey}{dt}      &amp;= Prey \left( r_{Prey} + a_{1, 1} Prey - a_{1, 2} Predator \right) \\
+\frac{dPredator}{dt}  &amp;= Predator \left( r_{Predator} + a_{2, 1} Prey \right)
+\end{aligned}\end{equation}$$`
+
+- We use the Jacobian to determine the **leading eigen value** a proxy for **reslience**
+
+
+---
+# Distribution of interactions strengths
+
+![:scalec 75%](img/distrib_2sp_points.png)
+
+
+---
+# Distribution of interactions strengths
+
+![:scalec 75%](img/distrib_2sp_stab.png)
+
+
+---
+# Distribution of interactions strengths
+
+![:scalec 75%](img/distrib_2sp_stab_res.png)
+
+
+
+---
+# Most stable system
+
+![:scalec 65%](img/most_stable.png)
 
 ???
-if stability taken as resilience so..
+if stability taken as resilience so...
+
+---
+# Least stable system
+
+![:scalec 65%](img/least_stable.png)
+
+
+---
+# LIM in classical Lotka-Volterra
+
+
+- Distribution of **interactions** = portray of the **biostructure**  
+
+--
+
+- Distribution of **resilience** of potential biostructures 
+
+--
+
+- The more constraints, the smaller the space
+
+--
+
+- Dynamics can be used to select among potential biostructures! 
+
 
 
 ---
 # Using more constraints
 
-![:scalec 70%](img/gellner3.png)
+### No Constraints 
+
+
+- Diversity increases <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> stability decreases 
+
+![:scalec 50%](img/rel_classic.png)
 
 
 - <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg> Gellner, McCann &amp; Hasting (2023), **PNAS**. 
+
+
+---
+# Using more constraints
+
+### Realistic constraints
+
+
+- Diversity increases <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg> stability decreases 
+
+![:scalec 50%](img/rel_no.png)
 
 
 ???
@@ -350,16 +463,19 @@ it is a very hopeful results if you use constraints interaction inference
 may be doable
 
 
+
+
+
 ---
 
 class: inverse, center, middle
 
-# Solving management challenges with LIM 
+# Towards Solving Management Challenges With LIM 
 
 ![:custom_hr]()
 
 ???
-go over various potential avenues where we can use lim
+go over various potential avenues where we can use LIM
 
 
 ---
@@ -372,8 +488,6 @@ go over various potential avenues where we can use lim
 - **assumptions**:
   - Lotka-Volterra
   - biomass/population known 
-- **constraints**: 
-  - interactions are positive and asymmetrical
 ]
 
 .pull-right[
@@ -385,7 +499,7 @@ go over various potential avenues where we can use lim
 |$$a_{2, 2}$$   | intraspecific competition  |
 |$$a_{2, 4}$$   | prey -&gt; predator           |
 |$$a_{3, 1}$$   | predator &lt;- prey           |
-|$$a_{3, 5}$$   | predator -&gt; top predator           |
+|$$a_{3, 5}$$   | predator -&gt; top predator   |
 |$$a_{4, 2}$$   | predator &lt;- prey           |
 |$$a_{4, 5}$$   | predator -&gt; top predator   |
 |$$a_{5, 3}$$   | top predator &lt;- predator   |
@@ -395,93 +509,53 @@ go over various potential avenues where we can use lim
 ]
 
 ---
+# A five species example
+
+.pull-left[
+![:scalec 50%](img/net5.png)
+
+- 5 species, 10 interactions
+- **assumptions**:
+  - Lotka-Volterra
+  - biomass/population known 
+]
+
+.pull-right[
+
+### constraints
+
+interaction strengths are:
+
+- positive
+- asymmetrical `\(a_{1,3} &gt; a_{3,1}\)`
+
+]
+
+---
 # A five species example - resilience 
 
-![:scalec 85%](img/boxplot-1.png)
+![:scalec 82%](img/distrib_5sp_res.png)
+
+- Potential biostructures and their resilience
 
 
 ---
-# A five species example - resilience 
+# Lest stable vs. top 25% most stable
 
-![:scalec 60%](img/dynamic_5.png)
-
-
----
-# Setting a&lt;sub&gt;5,3&lt;/sub&gt; to a constant
-
-
-![:scalec 80%](img/boxplot_one_less.png)
-
-
-???
-decreasing unknown 
-
----
-# Setting a&lt;sub&gt;5,3&lt;/sub&gt; to a constant
-
-
-![:scalec 50%](img/boxplot_one_less_stab.png)
-
+![:scalec 90%](img/most_25.png)
 
 
 ---
-# Refining energy constraints
+# Lest stable vs. top 10% most stable
 
-![:scalec 78%](img/change_energy_constraints.png)
-
-
----
-# Refining energy constraints
-
-![:scalec 50%](img/change_energy_constraints_stab.png)
-
+![:scalec 90%](img/most_10.png)
 
 
 ---
-# Most stable vs. least stable 
+# Lest stable vs. top 1% most stable
 
-![:scalec 80%](img/most_25.png)
+![:scalec 90%](img/most_1.png)
 
-
----
-# Most stable vs. least stable
-
-![:scalec 80%](img/most_10.png)
-
-
----
-# Increasing a&lt;sub&gt;3,1&lt;/sub&gt;
-
-![:scalec 80%](img/increase_a_3_1.png)
-
----
-# Increasing a&lt;sub&gt;3,1&lt;/sub&gt;
-
-![:scalec 45%](img/increase_a_3_1_full.png)
-
-
-
----
-# Increasing top predator biomass
-
-![:scalec 85%](img/increase_tp_biomass.png)
-
-
-???
-we get the full portray
-till here we had the biomass fix
-
----
-# Increasing top predator biomass
-
-![:scalec 50%](img/increase_tp_biomass_stab.png)
-
-
-
----
-# Analyzing temporal variation 
-
-![:scalec 95%](img/ts_3phases.png)
 
 
 ---
@@ -514,7 +588,6 @@ till here we had the biomass fix
 
 - allometric constraints (previous presentation)
 - constraints based on time series (variation of biomass)
-- working on a R package
 
 --
 
@@ -523,9 +596,17 @@ till here we had the biomass fix
 - This requires **data** (next presentation)
   - food webs topology  (spatially explicit)
   - biomass time series
-  - interactions constrains 
+  - interactions constraints 
  
 
+---
+# Expected outcomes 
+
+1. Paper: "Towards Solving Management Challenges With LIM"
+
+2. R package: "fwebinfr"
+
+3. Shiny App 
 
 
 ---
