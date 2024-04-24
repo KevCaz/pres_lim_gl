@@ -35,6 +35,9 @@ class: title-slide, middle
 library(iseWorkshops)
 ```
 
+???
+good understanding of what it does and have a broad perspective
+
 ---
 class: inverse, center, middle
 
@@ -207,7 +210,7 @@ You may know some flows
 
 --
 
-- Mass balance 
+- Mass balance (think ECOPATH)
 
 --
 
@@ -228,7 +231,7 @@ You may know some flows
 
 $$\frac{dB_i}{dt} = f_1 + f_2 + f_3 + ... $$
 
-- Using LIM, we obtained a **space**, sets of working flows $(f_1, f_2, ...)$
+- Using LIM, we obtain a **space**, sets of working flows $(f_1, f_2, ...)$
 
 
 ![:scalec 45%](img/space.png)
@@ -245,22 +248,6 @@ $$\frac{dB_i}{dt} = f_1 + f_2 + f_3 + ... $$
 - `r bk()` Soetaert & Van Oevelen (2009), **Oceanography**. 
 
 
----
-# Linear Inverse Models in Food Webs
-
-## A note about Ecopath
-
-- **Ecopath**: mass balance modelling
-- 2 master equations 
-
-```
-Production = catch + predation + net migration + 
-  biomass accumulation + other mortality
-
-Consumption = production + respiration + unassimilated food
-```
-
-- `r lk()` https://ecopath.org/about/#toggle-id-1
 
 
 
@@ -268,7 +255,7 @@ Consumption = production + respiration + unassimilated food
 
 class: inverse, center, middle
 
-# LIM for food web resilience
+# LIM and food web resilience
 
 ![:custom_hr]()
 
@@ -297,11 +284,12 @@ $$\begin{equation}\begin{aligned}
 \frac{d\color{red}{Predator}}{dt}  &= \color{red}{Predator} \left( r_{Predator} + a_{2, 1} \color{red}{Prey} \right)
 \end{aligned}\end{equation}$$
 
+- Functional response type I
+
 Classically: 
 
 1. interactions are known 
-2. we look variations of $Predator$ and $Prey$ population (individuals, biomass)
-3. study of the stability of the system 
+2. we study variations of $Predator$ and $Prey$ population (individuals, biomass), the stability of the system 
 
 
 ---
@@ -345,7 +333,7 @@ $$\begin{equation}\begin{aligned}
 
 
 ---
-# Sets of interactions strengths
+# Sets of interaction strengths
 
 Sets of interactions strengths that lead to the observed biomass
 
@@ -363,7 +351,7 @@ Sets of interactions strengths that lead to the observed biomass
 
 
 ---
-# Distribution of interactions strengths
+# Distribution of interaction strengths
 
 ![:scalec 75%](img/distrib_2sp.png)
 
@@ -377,23 +365,23 @@ $$\begin{equation}\begin{aligned}
 \frac{dPredator}{dt}  &= Predator \left( r_{Predator} + a_{2, 1} Prey \right)
 \end{aligned}\end{equation}$$
 
-- We use the Jacobian to determine the **leading eigen value** a proxy for **reslience**
+- We use the Jacobian to determine the **leading eigen value** a proxy for **resilience**
 
 
 ---
-# Distribution of interactions strengths
+# Distribution of interaction strengths
 
 ![:scalec 75%](img/distrib_2sp_points.png)
 
 
 ---
-# Distribution of interactions strengths
+# Distribution of interaction strengths
 
 ![:scalec 75%](img/distrib_2sp_stab.png)
 
 
 ---
-# Distribution of interactions strengths
+# Distribution of interaction strengths
 
 ![:scalec 75%](img/distrib_2sp_stab_res.png)
 
@@ -402,7 +390,7 @@ $$\begin{equation}\begin{aligned}
 ---
 # Most stable system
 
-![:scalec 65%](img/most_stable.png)
+![:scalec 80%](img/most_stable.png)
 
 ???
 if stability taken as resilience so...
@@ -410,27 +398,7 @@ if stability taken as resilience so...
 ---
 # Least stable system
 
-![:scalec 65%](img/least_stable.png)
-
-
----
-# LIM in classical Lotka-Volterra
-
-
-- Distribution of **interactions** = portray of the **biostructure**  
-
---
-
-- Distribution of **resilience** of potential biostructures 
-
---
-
-- The more constraints, the smaller the space
-
---
-
-- Dynamics can be used to select among potential biostructures! 
-
+![:scalec 80%](img/least_stable.png)
 
 
 ---
@@ -461,6 +429,24 @@ if stability taken as resilience so...
 ???
 it is a very hopeful results if you use constraints interaction inference 
 may be doable
+
+
+---
+# With LIM
+
+- generate distribution of **interactions** = portray of the **biostructure**  
+
+--
+
+- generate distribution of **resilience** of potential biostructures 
+
+--
+
+- the more the number constraints, the smaller the space
+
+--
+
+- time series and predicted dynamics can be compared to select among potential biostructures! 
 
 
 
@@ -540,41 +526,41 @@ interaction strengths are:
 
 
 ---
-# Lest stable vs. top 25% most stable
+# Least stable vs. top 25% most stable
 
 ![:scalec 90%](img/most_25.png)
 
 
 ---
-# Lest stable vs. top 10% most stable
+# Least stable vs. top 10% most stable
 
 ![:scalec 90%](img/most_10.png)
 
 
 ---
-# Lest stable vs. top 1% most stable
+# Least stable vs. top 1% most stable
 
 ![:scalec 90%](img/most_1.png)
 
 
 
 ---
-# Analyzing temporal variation 
+# Analyzing temporal variations 
 
 ![:scalec 85%](img/drawing_ts.png)
 
 
 ---
-# Analyzing temporal variation 
+# Structural changes
 
 ![:scalec 90%](img/3phases_all.png)
 
 
 
 ---
-# Analyzing temporal variation 
+# Evolution of the resilience
 
-![:scalec 60%](img/3phases_all_stab.png)
+![:scalec 52%](img/3phases_all_stab.png)
 
 
 
@@ -584,29 +570,26 @@ interaction strengths are:
 # Future Challenges 
 
 
-## A flexible tools to add constraints 
+### A flexible tools to add constraints 
 
 - allometric constraints (previous presentation)
 - constraints based on time series (variation of biomass)
 
 --
 
-## Work on real food webs 
+### Work on real food webs 
 
 - This requires **data** (next presentation)
   - food webs topology  (spatially explicit)
   - biomass time series
   - interactions constraints 
  
+--
 
----
-# Expected outcomes 
-
+### Expected outcomes 
 
 1. Paper: "Towards Solving Management Challenges With LIM"
-
 2. R package: "fwebinfr"
-
 3. Shiny App 
 
 
@@ -618,6 +601,10 @@ class: inverse, center, middle
 ![:custom_hr]()
 
 
+??? 
+very seminal 
+very simple 
+but useful to know if we want to join force
 
 
 <!-- demo here 5-10 min -->

@@ -48,6 +48,25 @@ decreasing unknown
 
 
 
+---
+# Linear Inverse Models in Food Webs
+
+## A note about Ecopath
+
+- **Ecopath**: mass balance modelling
+- 2 master equations 
+
+```
+Production = catch + predation + net migration + 
+  biomass accumulation + other mortality
+
+Consumption = production + respiration + unassimilated food
+```
+
+- `r lk()` https://ecopath.org/about/#toggle-id-1
+
+
+
 
 
 
